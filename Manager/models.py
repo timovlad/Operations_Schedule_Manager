@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from .validators import validate_future_date
 
 class Department(models.Model):
     name = models.CharField(max_length=100, unique=True)
@@ -37,7 +38,7 @@ class Patient(models.Model):
     doctor = models.ManyToManyField(Doctor, max_length=100, null=False, blank=False)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     place=models.IntegerField()
-    data_operation=models.DateTimeField()
+    data_operation=models.DateTimeField(validators=[validate_future_date])
     manipulation=models.ForeignKey(Manipulation, on_delete=models.CASCADE)
     class Meta:
         ordering = ["first_name", "last_name"]
