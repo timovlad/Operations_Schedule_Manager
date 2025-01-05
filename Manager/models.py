@@ -37,6 +37,7 @@ class Patient(models.Model):
     doctor = models.ManyToManyField(Doctor, max_length=100, null=False, blank=False)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     place=models.IntegerField()
+    data_operation=models.DateTimeField()
     manipulation=models.ForeignKey(Manipulation, on_delete=models.CASCADE)
     class Meta:
         ordering = ["first_name", "last_name"]
