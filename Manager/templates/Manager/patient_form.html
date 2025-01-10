@@ -1,15 +1,15 @@
 {% extends 'Manager/base.html' %}
 
-{% block title %}Добавить пациента{% endblock %}
+{% block title %}{{ form.instance.pk|yesno:"Редактировать пациента,Добавить пациента" }}{% endblock %}
 
 {% block content %}
 <div class="container mt-4">
-    <h2>Добавить пациента</h2>
+    <h2>{{ form.instance.pk|yesno:"Редактировать пациента,Добавить пациента" }}</h2>
     <form method="post">
         {% csrf_token %}
         {% load crispy_forms_tags %}
         {{ form|crispy }}
-        <button type="submit" class="btn btn-primary">Сохранить</button>
+        <button type="submit" class="btn btn-success">Сохранить</button>
         <a href="{% url 'patient_list' %}" class="btn btn-secondary">Отмена</a>
     </form>
 </div>
