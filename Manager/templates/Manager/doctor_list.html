@@ -1,0 +1,29 @@
+{% extends 'Manager/base.html' %}
+
+{% block title %}Список докторов{% endblock %}
+
+{% block content %}
+<h2 class="mt-4">Список докторов</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Отделение</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for doctor in doctors %}
+        <tr>
+            <td>{{ doctor.first_name }}</td>
+            <td>{{ doctor.last_name }}</td>
+            <td>{{ doctor.department.name }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">Доктора не найдены.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
