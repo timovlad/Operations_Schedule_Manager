@@ -1,24 +1,34 @@
+<!-- templates/Manager/navbar.html -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
         <a class="navbar-brand" href="{% url 'index' %}">MedScheduler</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link{% if request.resolver_match.url_name == 'doctor_list' %} active{% endif %}" href="{% url 'doctor_list' %}">Доктора</a>
+                        <a class="nav-link{% if request.resolver_match.url_name == 'doctor_list' %} active{% endif %}"
+                           href="{% url 'doctor_list' %}">Доктора</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link{% if request.resolver_match.url_name == 'patient_list' %} active{% endif %}" href="{% url 'patient_list' %}">Пациенты</a>
+                        <a class="nav-link{% if request.resolver_match.url_name == 'patient_list' %} active{% endif %}"
+                           href="{% url 'patient_list' %}">Пациенты</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link{% if request.resolver_match.url_name == 'surgery_list' %} active{% endif %}" href="{% url 'surgery_list' %}">Операции</a>
+                        <a class="nav-link{% if request.resolver_match.url_name == 'surgery_list' %} active{% endif %}"
+                           href="{% url 'surgery_list' %}">Операции</a>
                     </li>
                     <!-- Другие ссылки -->
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'logout' %}">Выйти</a>
+                        <!-- Изменения начинаются здесь -->
+                        <form method="post" action="{% url 'logout' %}" class="d-inline">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-link nav-link">Выйти</button>
+                        </form>
+                        <!-- Изменения заканчиваются здесь -->
                     </li>
                 {% else %}
                     <li class="nav-item">

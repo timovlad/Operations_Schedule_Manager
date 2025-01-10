@@ -3,11 +3,16 @@
 /* Общие стили */
 body {
     padding-top: 70px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
 }
 
 .hero-image {
-    background-image: url("{% static 'images/operating-room.jpg' %}");
+    background-image: url("../images/operating-room.jpg");
     background-size: cover;
     background-position: center;
     height: 80vh;
@@ -35,11 +40,12 @@ body {
 }
 
 .card {
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .footer {
@@ -60,10 +66,6 @@ body {
 
 .bg-primary {
     background-color: #007bff !important;
-}
-
-.fa-operating-room:before {
-    content: "\f0f8";
 }
 
 @media (max-width: 768px) {
