@@ -1,4 +1,6 @@
-{% load tz %}
-<footer class="bg-dark text-white mt-5 p-3 text-center">
-    © {% now "Y" %} Больница. Все права защищены.
+<!-- templates/Manager/footer.html -->
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container text-center">
+        <span class="text-muted">© {{ now|date:"Y" }} MedScheduler. Все права защищены.</span>
+    </div>
 </footer>

@@ -1,7 +1,64 @@
+<!-- templates/Manager/index.html -->
 {% extends 'Manager/base.html' %}
 
-{% block title %}Главная{% endblock %}
+{% block title %}Добро пожаловать{% endblock %}
 
 {% block content %}
-<h2>Добро пожаловать в систему резервирования операционных</h2>
+<div class="container-fluid p-0">
+
+    <!-- Hero Section -->
+    <div class="hero-image d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-3 mb-4">Добро пожаловать в Систему Резервирования Операционных</h1>
+            <p class="lead mb-5">Управляйте расписанием, резервируйте операционные и отслеживайте пациентов легко и эффективно.</p>
+            <a href="{% url 'doctor_list' %}" class="btn btn-primary btn-lg mx-2">Список докторов</a>
+            <a href="#" class="btn btn-success btn-lg mx-2">Резервировать операционную</a>
+            <a href="#" class="btn btn-secondary btn-lg mx-2">Список пациентов</a>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-5">Наши преимущества</h2>
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow border-0">
+                    <div class="card-body">
+                        <i class="fas fa-user-md fa-3x mb-3 text-primary"></i>
+                        <h5 class="card-title">Управление докторами</h5>
+                        <p class="card-text">Просматривайте и редактируйте информацию о докторах вашего медицинского учреждения.</p>
+                        <a href="{% url 'doctor_list' %}" class="btn btn-outline-primary">Перейти</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow border-0">
+                    <div class="card-body">
+                        <i class="fas fa-operating-room fa-3x mb-3 text-success"></i>
+                        <h5 class="card-title">Резервирование операционных</h5>
+                        <p class="card-text">Планируйте операции, бронируйте операционные и следите за расписанием.</p>
+                        <a href="#" class="btn btn-outline-success">Перейти</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow border-0">
+                    <div class="card-body">
+                        <i class="fas fa-procedures fa-3x mb-3 text-secondary"></i>
+                        <h5 class="card-title">Управление пациентами</h5>
+                        <p class="card-text">Сохраняйте и обновляйте информацию о пациентах и их запланированных операциях.</p>
+                        <a href="#" class="btn btn-outline-secondary">Перейти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="bg-primary text-white text-center py-5">
+        <h2>Начните управлять операциями прямо сейчас!</h2>
+        <a href="#" class="btn btn-light btn-lg mt-3">Запланировать операцию</a>
+    </div>
+
+</div>
 {% endblock %}

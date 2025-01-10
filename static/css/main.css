@@ -1,0 +1,73 @@
+/* static/css/main.css */
+
+/* Общие стили */
+body {
+    padding-top: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-image {
+    background-image: url("{% static 'images/operating-room.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+}
+
+.hero-image::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.hero-image .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image h1,
+.hero-image p {
+    color: #fff;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-lg {
+    padding: 0.75rem 1.25rem;
+    font-size: 1.25rem;
+}
+
+.bg-primary {
+    background-color: #007bff !important;
+}
+
+.fa-operating-room:before {
+    content: "\f0f8";
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        height: 60vh;
+    }
+}
