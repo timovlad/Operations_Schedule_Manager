@@ -1,7 +1,7 @@
 from django.core.exceptions import ValidationError
 from django.utils import timezone
 
-def validate_future_date(value):
+def validate_free_date(value):
     if value < timezone.now():
         raise ValidationError("Only future dates are allowed.")
     if value.hour < 8 or value.hour >= 16:
