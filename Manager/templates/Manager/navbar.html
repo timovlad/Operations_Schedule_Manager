@@ -1,38 +1,50 @@
 <!-- templates/Manager/navbar.html -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="{% url 'index' %}">MedScheduler</a>
+        <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+            <i class="fas fa-stethoscope me-2"></i> MedScheduler
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Переключить навигацию">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav align-items-center">
                 {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link{% if request.resolver_match.url_name == 'doctor_list' %} active{% endif %}"
-                           href="{% url 'doctor_list' %}">Доктора</a>
+                           href="{% url 'doctor_list' %}">
+                            <i class="fas fa-user-md me-1"></i> Доктора
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link{% if request.resolver_match.url_name == 'patient_list' %} active{% endif %}"
-                           href="{% url 'patient_list' %}">Пациенты</a>
+                           href="{% url 'patient_list' %}">
+                            <i class="fas fa-procedures me-1"></i> Пациенты
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link{% if request.resolver_match.url_name == 'surgery_list' %} active{% endif %}"
-                           href="{% url 'surgery_list' %}">Операции</a>
+                           href="{% url 'surgery_list' %}">
+                            <i class="fas fa-notes-medical me-1"></i> Операции
+                        </a>
                     </li>
                     <!-- Другие ссылки -->
                     <li class="nav-item">
-                        <!-- Изменения начинаются здесь -->
                         <form method="post" action="{% url 'logout' %}" class="d-inline">
                             {% csrf_token %}
-                            <button type="submit" class="btn btn-link nav-link">Выйти</button>
+                            <button type="submit" class="btn btn-link nav-link m-0 p-0">
+                                <i class="fas fa-sign-out-alt me-1"></i> Выйти
+                            </button>
                         </form>
-                        <!-- Изменения заканчиваются здесь -->
                     </li>
                 {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}">Войти</a>
+                        <a class="nav-link{% if request.resolver_match.url_name == 'login' %} active{% endif %}"
+                           href="{% url 'login' %}">
+                            <i class="fas fa-sign-in-alt me-1"></i> Войти
+                        </a>
                     </li>
                 {% endif %}
             </ul>
