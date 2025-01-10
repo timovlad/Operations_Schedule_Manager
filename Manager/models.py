@@ -1,6 +1,5 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-from .validators import validate_free_date
 
 
 class Department(models.Model):
@@ -33,7 +32,7 @@ class OperatingRoom(models.Model):
 
 
 class Surgery(models.Model):
-    start_time = models.DateTimeField() # validators=[validate_free_date]
+    start_time = models.DateTimeField()
     surgery_name = models.CharField(max_length=100, null=False, blank=False)
     operating_room = models.ForeignKey(OperatingRoom, on_delete=models.CASCADE)
 
