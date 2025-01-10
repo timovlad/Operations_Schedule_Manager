@@ -14,8 +14,9 @@ def index(request):
 
 @login_required
 def doctor_list(request):
-    doctors = Doctor.objects.all()
+    doctors = Doctor.objects.select_related('department').all()
     return render(request, 'Manager/doctor_list.html', {'doctors': doctors})
+
 
 
 

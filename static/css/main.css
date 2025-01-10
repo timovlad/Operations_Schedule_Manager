@@ -80,3 +80,29 @@ html, body {
 .navbar-nav .nav-link:hover {
     border-bottom: 2px solid #aaa;
 }
+
+/* Doctor Cards Styles */
+.card .display-1 {
+    font-size: 4rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.card .btn {
+    border-radius: 50px;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+}
