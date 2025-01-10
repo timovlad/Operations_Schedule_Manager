@@ -1,0 +1,38 @@
+{% extends 'Manager/base.html' %}
+
+{% block title %}Список пациентов{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Список пациентов</h2>
+    <a href="{% url 'patient_create' %}" class="btn btn-success mb-3">Добавить пациента</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Фамилия</th>
+                <th>Врач</th>
+                <th>Отделение</th>
+                <th>Палата</th>
+                <th>Операция</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for patient in patients %}
+            <tr>
+                <td>{{ patient.first_name }}</td>
+                <td>{{ patient.last_name }}</td>
+                <td>{{ patient.doctor.first_name }} {{ patient.doctor.last_name }}</td>
+                <td>{{ patient.department.name }}</td>
+                <td>{{ patient.room_number }}</td>
+                <td>{{ patient.operation.surgery_name }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">Пациенты не найдены.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
