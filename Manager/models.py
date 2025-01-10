@@ -33,7 +33,7 @@ class OperatingRoom(models.Model):
 
 
 class Surgery(models.Model):
-    start_time = models.DateTimeField(validators=[validate_free_date])
+    start_time = models.DateTimeField() # validators=[validate_free_date]
     surgery_name = models.CharField(max_length=100, null=False, blank=False)
     operating_room = models.ForeignKey(OperatingRoom, on_delete=models.CASCADE)
 
