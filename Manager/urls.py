@@ -13,5 +13,10 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(next_page='index'), name='logout'),
 path('patients/edit/<int:pk>/', views.patient_update, name='patient_update'),
 path('patients/delete/<int:pk>/', views.patient_delete, name='patient_delete'),
+path('surgeries/', views.surgery_list, name='surgery_list'),
+path('surgeries/new/', views.surgery_create, name='surgery_create'),
+path('surgeries/edit/<int:pk>/', views.surgery_update, name='surgery_update'),
+path('surgeries/delete/<int:pk>/', views.surgery_delete, name='surgery_delete'),
+
 
 ]

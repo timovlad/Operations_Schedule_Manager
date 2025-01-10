@@ -13,6 +13,16 @@
     <link href="{% static 'css/main.css' %}" rel="stylesheet">
 </head>
 <body>
+{% if messages %}
+<div class="container mt-3">
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">
+        {{ message }}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
     {% include 'Manager/navbar.html' %}
     {% block content %}
     {% endblock %}
