@@ -13,7 +13,7 @@ class Department(models.Model):
 
 
 class Doctor(AbstractUser):
-    department = models.ForeignKey(Department, on_delete=models.CASCADE)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, null=True, blank=True)
 
     class Meta:
         ordering = ["first_name", "last_name"]
