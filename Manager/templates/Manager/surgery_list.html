@@ -1,37 +1,49 @@
+<!-- templates/Manager/surgery_list.html -->
 {% extends 'Manager/base.html' %}
 
 {% block title %}Список операций{% endblock %}
 
 {% block content %}
-<div class="container mt-4">
-    <h2>Список операций</h2>
-    <a href="{% url 'surgery_create' %}" class="btn btn-success mb-3">Добавить операцию</a>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Название операции</th>
-                <th>Дата и время</th>
-                <th>Операционная</th>
-                <th>Действия</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for surgery in surgeries %}
-            <tr>
-                <td>{{ surgery.surgery_name }}</td>
-                <td>{{ surgery.start_time }}</td>
-                <td>{{ surgery.operating_room.name }}</td>
-                <td>
-                    <a href="{% url 'surgery_update' surgery.pk %}" class="btn btn-primary btn-sm">Редактировать</a>
-                    <a href="{% url 'surgery_delete' surgery.pk %}" class="btn btn-danger btn-sm">Удалить</a>
-                </td>
-            </tr>
-            {% empty %}
-            <tr>
-                <td colspan="4">Операции не найдены.</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+<div class="container mt-5">
+    <h2 class="text-center mb-5" data-aos="fade-up">Список операций</h2>
+    <div class="d-flex justify-content-end mb-4">
+        <a href="{% url 'surgery_create' %}" class="btn btn-success">
+            <i class="fas fa-plus me-1"></i> Добавить операцию
+        </a>
+    </div>
+    <div class="row">
+        {% for surgery in surgeries %}
+        <div class="col-md-6 col-lg-4 mb-4" data-aos="flip-left" data-aos-delay="{{ forloop.counter0|add:"100" }}">
+            <div class="card h-100 shadow border-0">
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <i class="fas fa-notes-medical fa-3x text-primary"></i>
+                    </div>
+                    <h5 class="card-title text-center">{{ surgery.surgery_name }}</h5>
+                    <p class="card-text text-center text-muted">
+                        <i class="fas fa-calendar-alt me-1"></i> {{ surgery.start_time|date:"d.m.Y H:i" }}
+                    </p>
+                    <p class="card-text text-center text-muted">
+                        <i class="fas fa-procedures me-1"></i> Операционная: {{ surgery.operating_room.name }}
+                    </p>
+                    <div class="d-flex justify-content-center mt-4">
+                        <a href="{% url 'surgery_update' surgery.pk %}" class="btn btn-primary btn-sm me-2">
+                            <i class="fas fa-edit"></i> Редактировать
+                        </a>
+                        <a href="{% url 'surgery_delete' surgery.pk %}" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i> Удалить
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <div class="alert alert-warning text-center">
+                Операции не найдены.
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}

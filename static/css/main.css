@@ -106,3 +106,91 @@ html, body {
     border-color: #ffeeba;
     color: #856404;
 }
+/* Стили для карточек операций */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card .btn {
+    border-radius: 50px;
+}
+
+.card i {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.card i:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+.btn .fas {
+    margin-right: 5px;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+}
+
+.d-flex.justify-content-end .btn {
+    border-radius: 50px;
+}
+
+@media (max-width: 576px) {
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* Стили для карточек пациентов */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card .btn {
+    border-radius: 50px;
+}
+
+.card i {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.card i:hover {
+    color: #17a2b8; /* Акцентный цвет при наведении */
+    transform: scale(1.1);
+}
+
+.btn .fas {
+    margin-right: 5px;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+}
+
+.d-flex.justify-content-end .btn {
+    border-radius: 50px;
+}
+
+@media (max-width: 576px) {
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

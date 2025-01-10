@@ -19,10 +19,9 @@ def doctor_list(request):
 
 
 
-
 @login_required
 def patient_list(request):
-    patients = Patient.objects.all()
+    patients = Patient.objects.select_related('doctor', 'department', 'operation').all()
     return render(request, 'Manager/patient_list.html', {'patients': patients})
 
 @login_required
@@ -66,7 +65,7 @@ def patient_delete(request, pk):
 
 @login_required
 def surgery_list(request):
-    surgeries = Surgery.objects.all()
+    surgeries = Surgery.objects.select_related('operating_room').all()
     return render(request, 'Manager/surgery_list.html', {'surgeries': surgeries})
 
 @login_required
