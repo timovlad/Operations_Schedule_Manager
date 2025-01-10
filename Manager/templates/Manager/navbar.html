@@ -1,4 +1,3 @@
-<!-- templates/Manager/navbar.html -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
         <a class="navbar-brand" href="{% url 'index' %}">MedScheduler</a>
@@ -17,7 +16,7 @@
                     </li>
                 {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}">Войти</a>
+                        <a class="nav-link{% if request.resolver_match.url_name == 'login' %} active{% endif %}" href="{% url 'login' %}">Войти</a>
                     </li>
                 {% endif %}
             </ul>
