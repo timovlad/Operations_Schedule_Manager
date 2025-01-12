@@ -1,9 +1,3 @@
-from django.test import TestCase
-from .forms import PatientForm, SurgeryForm
-from .models import Doctor, Department, Patient, Surgery, OperatingRoom
-from django.utils import timezone
-from datetime import timedelta
-from django.test import TestCase
 from .forms import PatientForm, SurgeryForm
 from .models import Doctor, Department, Patient, Surgery, OperatingRoom
 from django.utils import timezone
