@@ -1,9 +1,16 @@
 from django.urls import path
 from django.contrib.auth import views as auth_views
-from Manager.views import (IndexView, DoctorListView, PatientListView,
-                           PatientCreateView, PatientUpdateView, PatientDeleteView,
-                           SurgeryListView, SurgeryCreateView,
-                           SurgeryUpdateView, SurgeryDeleteView)
+from Manager.views import (
+    IndexView,
+    DoctorListView,
+    PatientListView,
+    PatientCreateView,
+    PatientUpdateView,
+    PatientDeleteView,
+    SurgeryListView,
+    SurgeryCreateView,
+    SurgeryUpdateView,
+    SurgeryDeleteView)
 
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
