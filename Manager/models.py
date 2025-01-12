@@ -1,7 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-
 class Department(models.Model):
     name = models.CharField(max_length=100, unique=True)
 
@@ -10,7 +9,6 @@ class Department(models.Model):
 
     def __str__(self):
         return self.name
-
 
 class Doctor(AbstractUser):
     department = models.ForeignKey(Department, on_delete=models.CASCADE, null=True, blank=True)
@@ -23,13 +21,11 @@ class Doctor(AbstractUser):
     def __str__(self):
         return f"{self.username} ({self.first_name} {self.last_name})"
 
-
 class OperatingRoom(models.Model):
     name = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
         return self.name
-
 
 class Surgery(models.Model):
     start_time = models.DateTimeField()
@@ -38,7 +34,6 @@ class Surgery(models.Model):
 
     def __str__(self):
         return f"{self.surgery_name} on {self.start_time}"
-
 
 class Patient(models.Model):
     first_name = models.CharField(max_length=100, null=False, blank=False)
@@ -50,4 +45,3 @@ class Patient(models.Model):
 
     class Meta:
         ordering = ["first_name", "last_name"]
-
