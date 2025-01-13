@@ -1,0 +1,15 @@
+{% extends 'Manager/base.html' %}
+
+{% block title %}Удалить операцию{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Удалить операцию</h2>
+    <p>Вы уверены, что хотите удалить операцию "{{ surgery.surgery_name }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Удалить</button>
+        <a href="{% url 'surgery_list' %}" class="btn btn-secondary">Отмена</a>
+    </form>
+</div>
+{% endblock %}

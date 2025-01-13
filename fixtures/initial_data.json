@@ -1,0 +1,352 @@
+[
+  {
+    "model": "Manager.department",
+    "pk": 1,
+    "fields": {
+      "name": "Кардиология"
+    }
+  },
+  {
+    "model": "Manager.department",
+    "pk": 2,
+    "fields": {
+      "name": "Хирургия"
+    }
+  },
+  {
+    "model": "Manager.department",
+    "pk": 3,
+    "fields": {
+      "name": "Неврология"
+    }
+  },
+  {
+    "model": "Manager.department",
+    "pk": 4,
+    "fields": {
+      "name": "Педиатрия"
+    }
+  },
+  {
+    "model": "Manager.department",
+    "pk": 5,
+    "fields": {
+      "name": "Онкология"
+    }
+  },
+  {
+    "model": "Manager.operatingroom",
+    "pk": 1,
+    "fields": {
+      "name": "Операционная №1"
+    }
+  },
+  {
+    "model": "Manager.operatingroom",
+    "pk": 2,
+    "fields": {
+      "name": "Операционная №2"
+    }
+  },
+  {
+    "model": "Manager.operatingroom",
+    "pk": 3,
+    "fields": {
+      "name": "Операционная №3"
+    }
+  },
+  {
+    "model": "Manager.operatingroom",
+    "pk": 4,
+    "fields": {
+      "name": "Операционная №4"
+    }
+  },
+  {
+    "model": "Manager.operatingroom",
+    "pk": 5,
+    "fields": {
+      "name": "Операционная №5"
+    }
+  },
+  {
+    "model": "Manager.doctor",
+    "pk": 1,
+    "fields": {
+      "username": "ivanov",
+      "password": "pbkdf2_sha256$600000$e7F6wCgSp7fQ9x4PckX5Zt$Xbe5Wh91pI7I8yb1pBzKa8AKzc6eO2c6vPjYJpZf8iQ=",
+      "first_name": "Иван",
+      "last_name": "Иванов",
+      "department": 1,
+      "is_staff": true,
+      "is_active": true,
+      "is_superuser": false
+    }
+  },
+  {
+    "model": "Manager.doctor",
+    "pk": 2,
+    "fields": {
+      "username": "petrov",
+      "password": "pbkdf2_sha256$600000$opMj7d6V8oD3AwLcMBhInV$M+ykIOxmHc6E2UiXv6uW+upMpt6H4TmOozOREv7SMxY=",
+      "first_name": "Петр",
+      "last_name": "Петров",
+      "department": 2,
+      "is_staff": true,
+      "is_active": true,
+      "is_superuser": false
+    }
+  },
+  {
+    "model": "Manager.doctor",
+    "pk": 3,
+    "fields": {
+      "username": "sidorov",
+      "password": "pbkdf2_sha256$600000$byRYn4S1q8F3X3F4pNj9Ta$Xsd3l7Di8E5k9I1UkVN8ZqUeZMJ7G0oF6rQk5DlOpkg=",
+      "first_name": "Сергей",
+      "last_name": "Сидоров",
+      "department": 3,
+      "is_staff": true,
+      "is_active": true,
+      "is_superuser": false
+    }
+  },
+  {
+    "model": "Manager.doctor",
+    "pk": 4,
+    "fields": {
+      "username": "smirnova",
+      "password": "pbkdf2_sha256$600000$K6J5pQs3n2C9K7LxGjV0Ft$Xaq8D0AkI6H3J9TzVbR1FsNzPZu9N1eMqAsOb3x4TpU=",
+      "first_name": "Мария",
+      "last_name": "Смирнова",
+      "department": 4,
+      "is_staff": true,
+      "is_active": true,
+      "is_superuser": false
+    }
+  },
+  {
+    "model": "Manager.doctor",
+    "pk": 5,
+    "fields": {
+      "username": "kuznetsov",
+      "password": "pbkdf2_sha256$600000$QmV4cVn7w5D8CvTxAjY6Rb$HjC2F7ZmH1A6M5KdQlU9ZkRfXcS1P2eF9uTh2WoItDo=",
+      "first_name": "Алексей",
+      "last_name": "Кузнецов",
+      "department": 5,
+      "is_staff": true,
+      "is_active": true,
+      "is_superuser": false
+    }
+  },
+  {
+    "model": "Manager.surgery",
+    "pk": 1,
+    "fields": {
+      "start_time": "2025-01-11T09:00:00Z",
+      "surgery_name": "Аортокоронарное шунтирование",
+      "operating_room": 1
+    }
+  },
+  {
+    "model": "Manager.surgery",
+    "pk": 2,
+    "fields": {
+      "start_time": "2025-01-11T12:00:00Z",
+      "surgery_name": "Аппендэктомия",
+      "operating_room": 2
+    }
+  },
+  {
+    "model": "Manager.surgery",
+    "pk": 3,
+    "fields": {
+      "start_time": "2025-01-12T10:00:00Z",
+      "surgery_name": "Удаление опухоли мозга",
+      "operating_room": 3
+    }
+  },
+  {
+    "model": "Manager.surgery",
+    "pk": 4,
+    "fields": {
+      "start_time": "2025-01-12T14:00:00Z",
+      "surgery_name": "Тонзиллэктомия",
+      "operating_room": 4
+    }
+  },
+  {
+    "model": "Manager.surgery",
+    "pk": 5,
+    "fields": {
+      "start_time": "2025-01-13T11:00:00Z",
+      "surgery_name": "Мастэктомия",
+      "operating_room": 5
+    }
+  },
+  {
+    "model": "Manager.surgery",
+    "pk": 6,
+    "fields": {
+      "start_time": "2025-01-13T15:00:00Z",
+      "surgery_name": "Катетеризация сердца",
+      "operating_room": 1
+    }
+  },
+  {
+    "model": "Manager.surgery",
+    "pk": 7,
+    "fields": {
+      "start_time": "2025-01-14T09:00:00Z",
+      "surgery_name": "Грыжесечение",
+      "operating_room": 2
+    }
+  },
+  {
+    "model": "Manager.surgery",
+    "pk": 8,
+    "fields": {
+      "start_time": "2025-01-14T13:00:00Z",
+      "surgery_name": "Удаление мениска",
+      "operating_room": 3
+    }
+  },
+  {
+    "model": "Manager.surgery",
+    "pk": 9,
+    "fields": {
+      "start_time": "2025-01-15T10:00:00Z",
+      "surgery_name": "Аденоидэктомия",
+      "operating_room": 4
+    }
+  },
+  {
+    "model": "Manager.surgery",
+    "pk": 10,
+    "fields": {
+      "start_time": "2025-01-15T14:00:00Z",
+      "surgery_name": "Резекция желудка",
+      "operating_room": 5
+    }
+  },
+  {
+    "model": "Manager.patient",
+    "pk": 1,
+    "fields": {
+      "first_name": "Андрей",
+      "last_name": "Новиков",
+      "doctor": 1,
+      "department": 1,
+      "room_number": 101,
+      "operation": 1
+    }
+  },
+  {
+    "model": "Manager.patient",
+    "pk": 2,
+    "fields": {
+      "first_name": "Елена",
+      "last_name": "Морозова",
+      "doctor": 2,
+      "department": 2,
+      "room_number": 102,
+      "operation": 2
+    }
+  },
+  {
+    "model": "Manager.patient",
+    "pk": 3,
+    "fields": {
+      "first_name": "Дмитрий",
+      "last_name": "Орлов",
+      "doctor": 3,
+      "department": 3,
+      "room_number": 201,
+      "operation": 3
+    }
+  },
+  {
+    "model": "Manager.patient",
+    "pk": 4,
+    "fields": {
+      "first_name": "Ольга",
+      "last_name": "Волкова",
+      "doctor": 4,
+      "department": 4,
+      "room_number": 202,
+      "operation": 4
+    }
+  },
+  {
+    "model": "Manager.patient",
+    "pk": 5,
+    "fields": {
+      "first_name": "Максим",
+      "last_name": "Соловьёв",
+      "doctor": 5,
+      "department": 5,
+      "room_number": 301,
+      "operation": 5
+    }
+  },
+  {
+    "model": "Manager.patient",
+    "pk": 6,
+    "fields": {
+      "first_name": "Анна",
+      "last_name": "Зайцева",
+      "doctor": 1,
+      "department": 1,
+      "room_number": 103,
+      "operation": 6
+    }
+  },
+  {
+    "model": "Manager.patient",
+    "pk": 7,
+    "fields": {
+      "first_name": "Михаил",
+      "last_name": "Павлов",
+      "doctor": 2,
+      "department": 2,
+      "room_number": 104,
+      "operation": 7
+    }
+  },
+  {
+    "model": "Manager.patient",
+    "pk": 8,
+    "fields": {
+      "first_name": "Светлана",
+      "last_name": "Семёнова",
+      "doctor": 3,
+      "department": 3,
+      "room_number": 203,
+      "operation": 8
+    }
+  },
+  {
+    "model": "Manager.patient",
+    "pk": 9,
+    "fields": {
+      "first_name": "Игорь",
+      "last_name": "Михайлов",
+      "doctor": 4,
+      "department": 4,
+      "room_number": 204,
+      "operation": 9
+    }
+  },
+  {
+    "model": "Manager.patient",
+    "pk": 10,
+    "fields": {
+      "first_name": "Юлия",
+      "last_name": "Федорова",
+      "doctor": 5,
+      "department": 5,
+      "room_number": 302,
+      "operation": 10
+    }
+  }
+]

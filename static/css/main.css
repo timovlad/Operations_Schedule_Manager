@@ -1,0 +1,192 @@
+body {
+    padding-top: 70px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.hero-image {
+    background-image: url("../images/operating-room.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+}
+
+.hero-image::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.hero-image .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image h1,
+.hero-image p {
+    color: #fff;
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-lg {
+    padding: 0.75rem 1.25rem;
+    font-size: 1.25rem;
+}
+
+.bg-primary {
+    background-color: #007bff !important;
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        height: 60vh;
+    }
+}
+.navbar-nav .nav-link.active {
+    border-bottom: 2px solid #fff;
+}
+
+.navbar-nav .nav-link:hover {
+    border-bottom: 2px solid #aaa;
+}
+
+.card .display-1 {
+    font-size: 4rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.card .btn {
+    border-radius: 50px;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card .btn {
+    border-radius: 50px;
+}
+
+.card i {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.card i:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+.btn .fas {
+    margin-right: 5px;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+}
+
+.d-flex.justify-content-end .btn {
+    border-radius: 50px;
+}
+
+@media (max-width: 576px) {
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card .btn {
+    border-radius: 50px;
+}
+
+.card i {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.card i:hover {
+    color: #17a2b8;
+    transform: scale(1.1);
+}
+
+.btn .fas {
+    margin-right: 5px;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+}
+
+.d-flex.justify-content-end .btn {
+    border-radius: 50px;
+}
+
+@media (max-width: 576px) {
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
