@@ -1,7 +1,5 @@
 # Operations Schedule Manager
 Operations Schedule Manager is a Django web application designed for scheduling surgeries, managing patient and doctor information, operating rooms, and surgical plans.
-# Demo
-https://operations-schedule-manager.onrender.com
 
 ## Key Features
 Patient Management: Add, edit, delete, and view patient information.
@@ -34,3 +32,8 @@ source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 pip install -r requirements.txt
 python manage.py loaddata initial_data.json
 ```
+# Demo
+https://operations-schedule-manager.onrender.com
+login: user
+password: user12345
+
