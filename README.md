@@ -34,6 +34,7 @@ python manage.py loaddata initial_data.json
 ```
 # Demo
 https://operations-schedule-manager.onrender.com
+
 login: user
 
 password: user12345
